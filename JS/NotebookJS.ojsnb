@@ -1,0 +1,90 @@
+{
+    "id": "2a0f571c-339f-49cc-9878-51aeface5b91",
+    "files": [],
+    "nodes": [
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "## NOTEBOOK JAVASCRIPT - Acompanhando o curso da Udemy",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "#### Prefácio - Sobre *console.log()* e *return*  \r\n\r\n&nbsp;&nbsp;Quando se insere um código em uma célula e solicita-se a sua execução, o Notebook executará **a célula**. A função console.log é chamada de *função side-effect*, o que significa que ela não executa ação alguma e gerando a saída \"undefined\".  \r\n&nbsp;&nbsp;Desta forma, se torna necessário para manter a boa utilização deste Notebook alterar o comando de visualização da tela *return*, conforme o seguinte exemplo:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-2",
+            "name": "",
+            "value": "const a = 123\r\nreturn a",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-3",
+            "name": "",
+            "value": "---",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-4",
+            "name": "",
+            "value": "##### Aula 7",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-5",
+            "name": "",
+            "value": "- O Método \"console.log()\" é o método **log** do objeto **console**.\r\n- Quando a gente introduz um texto entre aspas dentro de um console.log, este texto é considerado um **valor literal**.\r\n- É possível exibir no terminal através do console.log números de forma literal **sem usar apas**.\r\n- Exibindo conjuntos de caracteres de forma literal no console.log, pode-se usar a vírgula para diferenciar conjuntos diferentes, e o terminal irá os exibir separados por um espaço. Strings ainda devem estar cercadas por aspas.\r\n- a função console.log() é considerada uma boa ferramenta para debug.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-6",
+            "name": "",
+            "value": "Exercício:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-7",
+            "name": "",
+            "value": "return `Meu nome é \"Jade\". Estou aprendendo JavaScript às `+ 6 + ` da manhã.` // comentario",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-8",
+            "name": "",
+            "value": "#### Aula 8",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-9",
+            "name": "",
+            "value": "- Não é recomendado que se introduza muitos comentários dentro do código, e sim, que produza-se códigos de simples compreensão. ",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-10",
+            "name": "",
+            "value": "#### Aula 12 - JS + HTML",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-11",
+            "name": "",
+            "value": "    OBS: Esta aula utiliza mais de um arquivo, então o código de teste está na pasta 'Aula 12'.\r\n---\r\n    Notas:\r\n- Para startar um esqueleto básico para html, pode-se digitar '!' seguido da tecla Enter ou 'html:5' seguido da tecla Enter.\r\n- Dentro do console do Chrome, se eu desejar executar alguma linha de código introduzida, devo pressionar a tecla Enter.\r\n- o comando *alert* cria uma 'caixa' com uma mensagem no navegador, que \"trancará\" o resto do código até que o usuário pressione o botão 'ok'.\r\n- A quebra de linha dentro do console do Chrome é dada pelas teclas 'Shift'+'Enter'.\r\n- Dentro do console do Chrome, utilizar a seta \"pra cima\" mostra o último comando enviado.\r\n- O NodeJS **não contém** o comando *alert*. \r\n",
+            "mode": "md",
+            "outputs": []
+        }
+    ]
+}
