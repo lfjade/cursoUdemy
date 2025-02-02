@@ -82,7 +82,119 @@
         {
             "id": "tmp-11",
             "name": "",
-            "value": "    OBS: Esta aula utiliza mais de um arquivo, então o código de teste está na pasta 'Aula 12'.\r\n---\r\n    Notas:\r\n- Para startar um esqueleto básico para html, pode-se digitar '!' seguido da tecla Enter ou 'html:5' seguido da tecla Enter.\r\n- Dentro do console do Chrome, se eu desejar executar alguma linha de código introduzida, devo pressionar a tecla Enter.\r\n- o comando *alert* cria uma 'caixa' com uma mensagem no navegador, que \"trancará\" o resto do código até que o usuário pressione o botão 'ok'.\r\n- A quebra de linha dentro do console do Chrome é dada pelas teclas 'Shift'+'Enter'.\r\n- Dentro do console do Chrome, utilizar a seta \"pra cima\" mostra o último comando enviado.\r\n- O NodeJS **não contém** o comando *alert*. \r\n- É considerado boa prática não só não criar comandos JS na tag < script> como ter uma pasta onde estão estes arquivos, que vão ser consideradas na hora de referenciar o arquivo .js que está sendo chamado.\r\n",
+            "value": "    OBS: Esta aula utiliza mais de um arquivo, então o código de teste está na pasta 'Aula 12'.\r\n---\r\n    Notas:\r\n- Para startar um esqueleto básico para html, pode-se digitar '!' seguido da tecla Enter ou 'html:5' seguido da tecla Enter.\r\n- Dentro do console do Chrome, se eu desejar executar alguma linha de código introduzida, devo pressionar a tecla Enter.\r\n- o comando *alert* cria uma 'caixa' com uma mensagem no navegador, que \"trancará\" o resto do código até que o usuário pressione o botão 'ok'.\r\n- A quebra de linha dentro do console do Chrome é dada pelas teclas 'Shift'+'Enter'.\r\n- Dentro do console do Chrome, utilizar a seta \"pra cima\" mostra o último comando enviado.\r\n- O NodeJS **não contém** o comando *alert*. \r\n- É considerado boa prática não só não criar comandos JS na tag < script> como ter uma pasta onde estão estes arquivos, que vão ser referenciados na chamada do arquivo .js.\r\n",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "#### Aula 13 - Variáveis com 'let'",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "    Regras de criação de variáveis:\r\n- Não podemos criar variáveis com palavras reservadas\r\n- Variáveis precisam ter nomes significativos\r\n- Não podemos começar o nome de uma variável com números\r\n- O nome das variáveis não pode conter espaços ou traços\r\n- utilizamos *camelCase*\r\n- nomes de variáveis são *case sensitive*\r\n- Não podemos redeclarar variáveis;\r\n- **Não utilize var. Utilize let.**",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-2",
+            "name": "",
+            "value": "#### Aula 14 - Constantes com 'const'",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-3",
+            "name": "",
+            "value": "    Regras pra criação de constantes\r\n- Não podemos criar constantes com palavras reservadas\r\n- Constantes precisam ter nomes significativos\r\n- Não podemos começar o nome de uma constante com um número\r\n- Não podem contar espaços ou traços\r\n- Utilizamos camelCase\r\n- Case-sensitive\r\n- Não dá pra modificar o valor de uma constante\r\n- **Atenção**: quando reatribuimos o valor de uma variável, perdemos o seu valor original.\r\n- **Não utilize 'var', utilize 'const'.**\r\n- Não podemos inicializar constantes sem atribuir um valor a elas (já que elas não podem ser alteradas).\r\n- Prefira sempre usar const, a não ser que perceba que é preciso alterar o valor da variável.  \r\n- É considerada uma **boa prática de programação** chamar a função *typeof* sem parênteses para chamar o argumento\r\n    Exemplo: **console.log(typeof numero)** || console.log(typeof (numero))\r\n  \r\nO JavaScript é uma linguagem de *tipagem dinâmica*, ou seja: ao atribuir um valor a uma variável ou constante o JS supõe um tipo pré-definido pra esta variável ou constante,  \r\n  \r\n**console.log(typeof(variável))** retorna o tipo da variável",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "#### Aula 17 - Primeira diferença entre 'var' e 'let'",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "- Variáveis declaradas com *var* **podem ser redeclaradas**, enquanto variáveis declaradas com *let* **não podem ser redeclaradas**.\r\n- **ECMAScript** é uma padronização da linguagem JS criada pela empresa ECMA International; A versão ECMAScript de 2015 é chamada **ES6**\r\n- O comando 'let' foi introduzido na ES6.\r\n- É possível declarar pela primeira vez uma variável sem utilizar um comando de declaração, porém o JS interpreta que esta é uma **variável global**, ou seja, pode interferir no resto do seu código e portanto não é recomendado.  \r\n\r\n    OBS: 'var' em escopo global ou escopo de função\r\n    - Se 'var' for declarado fora de qualquer função, é considerada uma *variável global*;\r\n    - Se declarado dentro de uma função, é considerada uma *variável local* à função.\r\n\r\n",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-2",
+            "name": "",
+            "value": "#### Aula 18 - Tipos de dados primitivos",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-3",
+            "name": "",
+            "value": "- Ao declarar uma variável não tipada e não atribuída, o JS pressupõe que o tipo desta variável é 'undefined', ou seja, **não aponta pra local nenhum na memória**.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-4",
+            "name": "",
+            "value": "let nome\r\nreturn typeof nome",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-5",
+            "name": "",
+            "value": "- Ao declarar uma variável do tipo *null*, ela **também não aponta pra nenhum local na memória**.\r\n- Geralmente ao atribuir *null* para uma variável, esperamos que ela seja reatribuída para algum valor posteriormente.\r\n- Quando eu defino uma variável *null*, eu informo ao JS que eu especificamente não quero que ela aponte pra algum local na memória.\r\n- **É possível** atribuir *undefined* como o tipo de uma variável, mas o correto ao desejar que esta variável não aponte pra nenhum local na memória é utilizar o *null*.\r\n- *null* é do tipo *object*, enquanto *undefined* é do tipo *undefined*.\r\n- *null* não é atribuído por default.\r\n- o JS usa *undefined* para indicar propriedades ou variáveis inexistentes, como no exemplo:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-6",
+            "name": "",
+            "value": "let obj = {}\r\nreturn obj.nome // undefined\r\n",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-7",
+            "name": "",
+            "value": "    ATENÇÃO ÀS VERIFICAÇÕES LÓGICAS:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-8",
+            "name": "",
+            "value": "let a;\r\nlet b = null;\r\n\r\nreturn(a == b); // true (porque ambos são \"falsy\")\r\nreturn(a === b); // false (porque `undefined` !== `null`)\r\n",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-9",
+            "name": "",
+            "value": "    Problemas com 'JSON.stringify'\r\n- Se um objeto tiver propriedades *undefined*, elas são **removidas** ao converter para JSON, enquanto null é mantido.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-10",
+            "name": "",
+            "value": "let obj = { nome: undefined, idade: null };\r\nreturn (JSON.stringify(obj)); // {\"idade\":null}",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-11",
+            "name": "",
+            "value": "Quando precisamos que um valor \"vazio\" seja mantido em JSON ou ao manipular APIs, devemos usar *null*.",
             "mode": "md",
             "outputs": []
         }
