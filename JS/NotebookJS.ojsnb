@@ -173,7 +173,7 @@
         {
             "id": "tmp-8",
             "name": "",
-            "value": "let a;\r\nlet b = null;\r\n\r\nreturn(a == b); // true (porque ambos são \"falsy\")\r\nreturn(a === b); // false (porque `undefined` !== `null`)\r\n",
+            "value": "let a; // undefined\r\nlet b = null; // null\r\n\r\nreturn(a == b); // true (porque ambos são \"falsy\")\r\nreturn(a === b); // false (porque `undefined` !== `null`)\r\n",
             "mode": "javascript",
             "outputs": []
         },
@@ -194,7 +194,175 @@
         {
             "id": "tmp-11",
             "name": "",
-            "value": "Quando precisamos que um valor \"vazio\" seja mantido em JSON ou ao manipular APIs, devemos usar *null*.",
+            "value": "Quando precisamos que um valor \"vazio\" seja mantido em JSON ou ao manipular APIs, devemos usar *null*.  \r\n\r\n    Tipos de dados primitivos:\r\n- String\r\n- Number\r\n- Undefined\r\n- Null\r\n- Boolean\r\n- Symbol",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "#### Aula 20",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "    Operadoradores aritiméticos:  \r\n\r\n- Adição: +\r\n- Subtração: -\r\n- Multiplicação: *\r\n- Divisão: /\r\n- Potênciação: **\r\n- Resto da divisão: %  \r\n\r\n\r\n    Operadoradores de incremento:  \r\n\r\n- Incrementa em um: ++\r\n- Descrescenta em um: --  \r\n\r\nOBS: operadores de incremento podem ser posicionados à frente ou atrás da variável. A diferença é que se à frete o contador primeiro soma e depois referencia, e atrás, primeiro referencia e depois soma.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-2",
+            "name": "",
+            "value": "let contador =0\r\nreturn contador++",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-3",
+            "name": "",
+            "value": "let contador =0\r\nreturn ++contador",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-4",
+            "name": "",
+            "value": "    Operadores de atribuição composta  \r\n- contador+=passo -> contador = contador+passo\r\n- contador-=passo -> contador = contador-passo\r\n- contador*=passo -> contador = contador*passo\r\n- contador/=passo -> contador = contador/passo\r\n- contador%=passo -> contador = contador%passo\r\n- contador**=passo -> contador = contador**passo",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-5",
+            "name": "",
+            "value": "OBS: em alguns casos, quando o primeiro elemento da operação aritimética for do tipo número e um segundo elemento for do tipo string mas uma string de números, o JS converte o segundo elemento e efetua a operação.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-6",
+            "name": "",
+            "value": "- parseInt(variavel): converte uma string em um número inteiro (ou seja, também faz truncamento)\r\n- parseFloat(variavel): converte mantendo as casas decimais  \r\n\r\nAmbas as funções tem as seguintes características em comum:\r\n- ignoram espaços em branco no início",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-7",
+            "name": "",
+            "value": "let exemplo = \"  32\"\r\nreturn parseInt(exemplo)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-8",
+            "name": "",
+            "value": "- Lêem até encontrar um caractere inválido:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-9",
+            "name": "",
+            "value": "let exemplo = \"3.14abc\"\r\nreturn parseFloat(exemplo)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-10",
+            "name": "",
+            "value": "- Retornam NaN caso a string não comece com um número",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-11",
+            "name": "",
+            "value": "let exemplo = \"abc123\"\r\nreturn parseInt(exemplo)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-12",
+            "name": "",
+            "value": "- Aceitam notação científica (e ou E)",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-13",
+            "name": "",
+            "value": "let exemplo = \"2.5e3\"\r\nreturn parseInt(exemplo)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-14",
+            "name": "",
+            "value": "let exemplo = \"2.5e3\"\r\nreturn parseFloat(exemplo)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-15",
+            "name": "",
+            "value": "    OBS: Função Number()  \r\nA função Number() em JavaScript é usada para converter um valor para o tipo numérico. Diferente de parseInt() e parseFloat(), que analisam strings parcialmente, Number() tenta converter a string inteira em um número ou retorna NaN se a conversão falhar.  \r\nQuando usar?  \r\n- Quando tem certeza que o valor é um número válido\r\n- Para converter valores booleanos (true converte para 1 e false converte para 0) e null (converte para 0).\r\n- Evite usar para strings misturadas com texto, pois retorna NaN.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-16",
+            "name": "",
+            "value": "    Em Resumo:  \r\n- Number() é mais rigoroso e falha se encontrar caracteres inválidos;\r\n- parseInt() e parseFloat() são mais tolerantes e tentam extrair números de strings;\r\n- Use Number() quando quiser conversões diretas e sem ambiguidades.\r\n",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-17",
+            "name": "",
+            "value": "#### Aula 21 - métodos alert, confirm e prompt",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-18",
+            "name": "",
+            "value": "- *alert()* na verdade é uma função que está dentro do objeto *window*. Quando usamos apenas *alert()*, na verdade isto é um atalho para *window.alert()*. Retorna 'undefined'.\r\n- tudo que está dentro do objeto *window* está relacionado à *janela do navegador*.\r\n- *window.confirm('mensagem')*: exibe uma mensagem de confirmação, com um botão de ok e um de cancelar. retorna 'true' ou 'false'.\r\n- *window.prompt('mensagem')*: pede entrada de dados com botões 'cancelar' e 'ok' e printa mensagem contida nos parênteses. Retorna a entrada.\r\n",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-19",
+            "name": "",
+            "value": "    OBS: Se uma 'função' está fora de um objeto ela é *de fato* uma função, enquanto se ela estiver dentro de um objeto, é considerada um **método**.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-20",
+            "name": "",
+            "value": "- Pode-se atribuir os resultados destes métodos à variáveis, que, depois da criação, quando chamadas, retornam o resultado da função.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-21",
+            "name": "",
+            "value": "    OBS: por algum motivo, se eu peço let variavel = prompt('mensagem'), apesar de armazenar a variável, o retorno é undefined.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-22",
+            "name": "",
+            "value": "- Por default, o a tipagem da variável recebida através de prompt é string.\r\n- Para converter a entrada para número, pode-se usar qualquer uma das funções de conversão (parseInt, parseFloat ou Number)\r\n- Strings do tipo `${string}`são chamadas de *template strings*.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-23",
+            "name": "",
+            "value": "",
             "mode": "md",
             "outputs": []
         }
