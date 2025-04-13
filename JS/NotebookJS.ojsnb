@@ -362,7 +362,322 @@
         {
             "id": "tmp-23",
             "name": "",
-            "value": "",
+            "value": "#### Aula 24 - Mais sobre strings",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "- Se a string foi aberta com aspas simples, pode-se usar aspas duplas como texto e vice-versa.\r\n- Para não \"quebrar\" a string declarada com strings duplas dentro do texto, pode-se usar uma barra invertida antes das aspas",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "let texto = \"Um \\\"texto\\\"\"\r\nreturn texto",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "- A barra invertida \"skipa\" o caractere seguinte.\r\n- Para obter o caractere de posição i de uma string, usa-se a função .charAt(i)",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-2",
+            "name": "",
+            "value": "let texto = \"Um \\\"texto\\\"\"\r\nreturn texto.charAt(6)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-3",
+            "name": "",
+            "value": "- .concat('textos', 'concatenados')\r\n- .indexOf('texto', 'parametro') : indica qual o índice da string em que começa a string passada. Retorna -1 caso não contenha. O *parâmetro* é opcional, e indica a partir de qual índice o método começa a pesquisar.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-4",
+            "name": "",
+            "value": "let texto = \"Um \\\"texto\\\"\"\r\nreturn texto.indexOf('tex')",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-5",
+            "name": "",
+            "value": "- .lastIndexOf('texto', 'parametro'): como indexOf mas de trás pra frente.\r\n- .match(/[a-z]/g): retorna todas as correspondências de letras minúsculas de uma string.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-6",
+            "name": "",
+            "value": "OBS: \"/[a-z]/g\" é uma \"expressão regular\"; caso oculta a flag 'z', tem um retorno diferente.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-7",
+            "name": "",
+            "value": "let texto = \"Um \\\"texto\\\"\"\r\nreturn texto.match(/[a-z]/g)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-8",
+            "name": "",
+            "value": "let texto = \"Um \\\"texto\\\"\"\r\nreturn texto.match(/[a-z]/)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-9",
+            "name": "",
+            "value": "No caso acima, ele retorna a primeira letra minúscula do texto, onde ela se encontra, qual foi o texto procurado e 'groups' (que eu ainda não sei o que é).",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-10",
+            "name": "",
+            "value": "- .search(/[a-z]/): retorna somente o índice conforme a expressão passada, independente da flag g.\r\n- .replace('texto a ser substituido','texto a substituir'). Estes parâmetros aceitam expressões regulares.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-11",
+            "name": "",
+            "value": "let texto = \"Um \\\"texto\\\"\"\r\nreturn texto.replace(/Um/, \"Outro\")",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-12",
+            "name": "",
+            "value": "let texto = \"O rato roeu a roupa do rei de roma\"\r\nreturn texto.replace(/r/, '#')",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-13",
+            "name": "",
+            "value": "- caso introduzido o parâmetro 'g' após o texto a ser substituído, ele substitui todas as entradas.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-14",
+            "name": "",
+            "value": "let texto = \"O rato roeu a roupa do rei de roma\"\r\nreturn texto.replace(/r/g, '#')",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-15",
+            "name": "",
+            "value": "- .length : método que retorna o tamanho da string\r\n- .slice(começo, fim) : \"recorta\" um pedaço de uma string. Índices negativos indicam a contagem de trás pra frente.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-16",
+            "name": "",
+            "value": "let texto = \"O rato roeu a roupa do rei de roma\"\r\nreturn texto.slice(2, 6)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-17",
+            "name": "",
+            "value": "OBS: o \"slice\" recorta em \"conjunto aberto\", ou seja, o índice do slice que corresponde ao último índice da string não é introduzido. ",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-18",
+            "name": "",
+            "value": "let texto = \"O rato roeu a roupa do rei de roma\"\r\nreturn texto.slice(-4)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-19",
+            "name": "",
+            "value": "Nesse caso, ele vai do índice -4 até o último.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-20",
+            "name": "",
+            "value": "let texto = \"O rato roeu a roupa do rei de roma\"\r\nreturn texto.slice(-4, -1)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-21",
+            "name": "",
+            "value": "Neste caso, ele indica que o índice final é o índice de texto menos um caractere.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-22",
+            "name": "",
+            "value": "let texto = \"O rato roeu a roupa do rei de roma\"\r\nreturn texto.substring(texto.length -4)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-23",
+            "name": "",
+            "value": "let texto = \"O rato roeu a roupa do rei de roma\"\r\nreturn texto.substring(texto.length -4, texto.length -1)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-24",
+            "name": "",
+            "value": "OBS: O slice é considerado uma maneira mais simples de utilizar o substring",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-25",
+            "name": "",
+            "value": "- .split('caractere divisor da string', 'número limitador'): divide a string em um array de palavras separada conforme o parâmetro um. O parâmetro dois indica a quantidade de índices que o array conterá. ",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-26",
+            "name": "",
+            "value": "let texto = \"O rato roeu a roupa do rei de roma\"\r\nreturn texto.split(' ')",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-27",
+            "name": "",
+            "value": "let texto = \"O rato roeu a roupa do rei de roma\"\r\nreturn texto.split(' ', 2)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-28",
+            "name": "",
+            "value": "- .toUpperCase(): transforma a string em uma string de letras maiúsculas\r\n- .toLowerCase(): transforma a string em uma string de letras minúsculas",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-29",
+            "name": "",
+            "value": "Mais info: sites de documentação: W3schools, MDM, ECMA",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-30",
+            "name": "",
+            "value": "- document.write('texto'): escreve um texto dentro da janela html no navegador.\r\n- window.document.body : acessa o body pelo navegador\r\n- window.document.body.innerHTML: retorna o HTML presente no texto.\r\n- window.document.body.innerHTML = 'Outro texto': torna o HTML do body na janela em questão igual ao parâmetro passado. Retorna o parâmetro.\r\n- window.document.body.innerHTML += 'Outro texto': concatena recursivamente conforme executado. Pode receber tags HTML como '<br />'",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "#### Aula 25 - Mais sobre numbers",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "- Number(): é um *objeto global* em JS, uma função construtora usada para converter valores para number.\r\n- Number() converte true para 1 e false para 0",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "##### Outros conversores para tipo numérico",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "##### parseInt\r\n- parseInt(número, base): converte \"até onde conseguir\" para um número inteiro\r\n- Aceita bases diferentes de decimal. Decimal é default.\r\n- Arredonda por trucamento",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-2",
+            "name": "",
+            "value": "##### parseFloat\r\n- parseInt(número, base): converte \"até onde conseguir\" para um número de ponto flutuante\r\n- Aceita somente base decimal\r\n- Não arredonda",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-3",
+            "name": "",
+            "value": "##### Operador +\r\n- \"Força\" o segundo valor da soma ao tipo do primeiro valor. Se o primeiro valor for do tipo numérico, o operador tenta converter o segundo.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-4",
+            "name": "",
+            "value": "- .toFixed(valor, casas) retorna uma string",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-5",
+            "name": "",
+            "value": "##### Outras funções relevantes ao se trabalhar com números\r\n- .toString(numero): converte para string. Retorna \"true\" para true e \"false\" para false.\r\n- .toFixed(parametro): converte para string com casas decimais definidas no parâmetro e arredonda corretamente.\r\n- .isInteger(numero): método de Number; retorna true ou false",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-6",
+            "name": "",
+            "value": "let a = true\r\nreturn a.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-7",
+            "name": "",
+            "value": "let a = 75\r\nreturn Number.isInteger(a)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-8",
+            "name": "",
+            "value": "- isNaN(numero): testa se uma entrada é \"not a number\". Retorna true ou false.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-9",
+            "name": "",
+            "value": "##### Sobre precisão\r\nO JS segue o *IEEE 754-2008*, que é um padrão internacional estabelecido pelo **Institute o Eletrical and Eletronics Engeneers**, que define como números de ponto flutuante são representados e manipulados em computadores. O JS por default usa precisão de 64 bits (precisão dupla).\r\nIsso se torna necessário porque as operações na máquina são feitas em Binário, e, ao converter para decimal acaba gerando imprecisão.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-10",
+            "name": "",
+            "value": "Existem alguns métodos de conversão que \"forçam\" um número a ser Inteiro, como .parseFloat ou o próprio Number().",
             "mode": "md",
             "outputs": []
         }
