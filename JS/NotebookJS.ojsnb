@@ -621,7 +621,7 @@
         {
             "id": "tmp-2",
             "name": "",
-            "value": "##### parseFloat\r\n- parseInt(número, base): converte \"até onde conseguir\" para um número de ponto flutuante\r\n- Aceita somente base decimal\r\n- Não arredonda",
+            "value": "##### parseFloat\r\n- parseFloat(número): converte \"até onde conseguir\" para um número de ponto flutuante\r\n- Aceita somente base decimal\r\n- Não arredonda",
             "mode": "md",
             "outputs": []
         },
@@ -678,6 +678,139 @@
             "id": "tmp-10",
             "name": "",
             "value": "Existem alguns métodos de conversão que \"forçam\" um número a ser Inteiro, como .parseFloat ou o próprio Number().",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-11",
+            "name": "",
+            "value": "##### Aula 27 - Objeto Math\r\n- Math.floor(numero): arredonda para baixo para inteiro\r\n- Math.ceil(numero): arredonda pra cima para inteiro\r\n- Math.round(numero): arredonda corretamente para inteiro\r\n- Math.max(numeros): retorna o maior número em um conjunto de números\r\n- Math.min(numeros): retorna o menor número em um conjunto de números\r\n- Math.random(): retorna um número aleatório no intervalo [0,1)\r\n- Math.pow(base, expoente): retorna um número elevado a uma potência.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-12",
+            "name": "",
+            "value": "let aleatorio = Math.round(Math.random() * (10-5)+5)\r\nreturn aleatorio",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-13",
+            "name": "",
+            "value": "OBS: números divididos por zero em JS retornam um valor do tipo *Infinity*, e retorna true se testado.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "##### Aula 27 - Exercícios com Math\r\n\r\n- Em HTML, se usa apenas um id por elemento (não se repete id por página)\r\n- Elementos obtidos por prompt são supostos como strings ",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "##### Aula 28 - Arrays (básico)\r\n\r\n**Array é um objeto indexado.**",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "const alunos = ['Luiz', 'Maria', 'Joao', 'Luiza', 'Eduardo']\r\nreturn typeof alunos",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-2",
+            "name": "",
+            "value": "- É recomendado colocar apenas um tipo de dado num array, ainda que o JS não nos limite a isso.\r\n- se você rodar 'array[array.length]=dado', isso vai adicionar 'dado' ao array na posição [length], ou seja, na nova posição criada pelo índice \"length\" que vai ser justamente o \"+1\". É equivalente a array.push(dado).\r\n- array.unshift(dado): adiciona o dado à posição 0 do array e \"joga pra baixo\" os dados anteriores.\r\n- array.pop(): remove o último dado do array\r\n- const removido = array.pop(): recebe em 'removido' o último dado e o remove do array.\r\n- array.shift(dado): remove o dado da posição 0.\r\n- delete array[posicao]: torna vazia a posição no array. console.log(array[posicao]) retorna undefined.\r\n- console.log(array[<posicao nao definida>]) retorna undefined\r\n- recebe as mesmas funções de string\r\n- É recomendado que não se use funções que alterar arrays a partir dos primeiros índices, pois isso toma recurso computacional.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-3",
+            "name": "",
+            "value": "const alunos = ['Luiz', 'Maria', 'Joao', 'Luiza', 'Eduardo']\r\nreturn alunos.slice(0,3)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-4",
+            "name": "",
+            "value": "const alunos = ['Luiz', 'Maria', 'Joao', 'Luiza', 'Eduardo']\r\nreturn alunos.slice(0,-2)",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-5",
+            "name": "",
+            "value": "Podemos verificar se um elemento é \"uma instância\" de outro tipo de elemento. No caso dos arrays, são uma instancia de objeto.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-6",
+            "name": "",
+            "value": "const alunos = ['Luiz', 'Maria', 'Joao', 'Luiza', 'Eduardo']\r\n\r\nreturn alunos instanceof Array",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-7",
+            "name": "",
+            "value": "##### Aula 30 - const com valores mutáveis\r\n\r\nAo se definir uma const com um valor primitivo, ela é, de fato, imutável. Porém, ao atribuir a uma const um tipo mutável, ela pode receber alterações. Isso acontece porque quando alteramos um valor interno num objeto, a constante em si não foi reatribuída, ou seja, continua apontando para o mesmo local na memória.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-8",
+            "name": "",
+            "value": "##### Aula 31: Funções em JS (básico)\r\n- Ao chamar uma função, o uso dos parênteses indica que se deseja que a mesma seja executada imediatamente.\r\n- a função não lê nada após de return\r\n- variáveis declaradas dentro da função são \"de escopo\", ou seja, você poderia, por exemplo, redeclarar uma variável com o mesmo nome dentro e fora da função, e não haverá nenhum problema de compilação.\r\n- parâmetros podem receber default na chamada da função.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-9",
+            "name": "",
+            "value": "function soma (x=1, y=2){\r\n    const resultado =x+y\r\n    return resultado\r\n}\r\n\r\nconst resultado = soma(4)\r\nreturn resultado",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-10",
+            "name": "",
+            "value": "OBS: função anônima\r\n\r\nconst variavel = function (params){<corpo>}\r\n\r\nOU **ARROW FUNCTION**\r\n\r\nconst variavel = (param) => {corpo}\r\n\r\nse tem só um parâmetro:\r\n\r\nconst variavel = param => {corpo}\r\n\r\nse só tem uma linha de código:\r\n\r\nconst variavel = param => corpo",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-11",
+            "name": "",
+            "value": "##### Aula 32 - Objetos (básico)\r\n- Criando um objeto literal:\r\n\r\nconst pessoa1 = {\r\n    nome: 'Jade',\r\n    sobrenome: 'Fernandes',\r\n    idade: 29\r\n}\r\n\r\n- criando um objeto através de uma função 'factory':\r\nfunction criaPessoa (nome, sobrenome, idade){\r\n    return {\r\n        nome:nome,\r\n        sobrenome:sobrenome,\r\n        idade:idade\r\n    }\r\n}\r\n\r\nou, de forma mais suscinta:\r\n\r\nfunction criaPessoa (nome, sobrenome, idade){\r\n    return {\r\n        nome,\r\n        sobrenome,\r\n        idade\r\n    }\r\n}\r\n\r\ntambém:\r\n\r\nfunction criaPessoa(nome, sobrenome, idade){\r\n    return {nome, sobrenome, idade}\r\n}\r\n\r\n- 'argumentos' são os dados passados para parâmetros\r\n\r\n- métodos em objetos:\r\n\r\nconst pessoa1 = {\r\n    nome: 'Jade',\r\n    sobrenome: 'Fernandes',\r\n    idade: 29\r\n\r\n    fala(){\r\n        console.log(\"lalala\")\r\n    }\r\n}",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-12",
+            "name": "",
+            "value": "##### Aula 33 - Valores Primitivos e Valores por Referência\r\n\r\n- Valores 'primitivos' são **imutáveis**\r\n\r\nNote que:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-13",
+            "name": "",
+            "value": "const nome = \"Luiz\"\r\nnome[0]=\"R\"\r\nreturn nome[0]",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-14",
+            "name": "",
+            "value": "- A string não pode ser mudada",
             "mode": "md",
             "outputs": []
         }
