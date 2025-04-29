@@ -810,7 +810,14 @@
         {
             "id": "tmp-14",
             "name": "",
-            "value": "- A string não pode ser mudada",
+            "value": "- O *valor* da string não pode ser mudado\r\n- ao uma variável ser definida através de outra, faz-se uma 'cópia' do seu valor primitivo.\r\n- Arrays e objetos e funções são valores de referência\r\n- Quando uma varável é definida através de outra por referência, as duas variáveis estão apontando para o mesmo lugar na memória, ou seja, se o elemento da memória for alterado, tanto chamá-lo pela primeira quanto pela segunda variável, o retorno será o mesmo.\r\n- para \"copiar\" os valores de uma variável de referêcia para uma variável literal usa-se b=[...a]. Aqui se faz \"um spread\" de a em b, fazendo com que b seja independente.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "",
             "mode": "md",
             "outputs": []
         }
