@@ -848,6 +848,314 @@
             "value": "#### Aula 41 - if, elseif e else (II)\r\n- IF, ELSEIF E ELSE faz avaliação de curto-circuito",
             "mode": "md",
             "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "#### Aula 45 - Operação Ternária",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "* (condicao) ? 'valor verdadeiro':'valor falso'\r\n\r\n\r\n\r\n* variavelf = variavelo || 'fallback'\r\n    neste caso:\r\n\r\n    variavelo || fallback -> se variavelo \"truish\", variavelo ; senão, fallback.\r\n",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-0",
+            "name": "",
+            "value": "#### Aula 46 - Objeto Date",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-1",
+            "name": "",
+            "value": "A função date é uma função construtora, de modo que deve ser usada com a sintaxe apropriada. Toda função construtora começa com letra maiúscula.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-2",
+            "name": "",
+            "value": "const data = new Date()\r\n\r\nreturn data",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-3",
+            "name": "",
+            "value": "toda vez que esta função é chamada, ela cria uma nova data, com dia, hora, minuto, segundo.\r\n\r\nex: 2025-11-08T19:38:44.905Z\r\n\r\nAlém disso, ela possui várias funções intrínsecas que permitem que trabalhemos com estas datas. Por exemplo:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-4",
+            "name": "",
+            "value": "const data = new Date()\r\n\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-5",
+            "name": "",
+            "value": "As datas são baseadas em quantos milésimos de segundo passaram desde o \"Unix Timestamp\", 1/1/1970.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-6",
+            "name": "",
+            "value": "const data = new Date(0)\r\n\r\nreturn data",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-7",
+            "name": "",
+            "value": "const tresHoras = 60 * 60 * 3 * 1000\r\n\r\nconst data = new Date (0 + tresHoras)\r\n\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-8",
+            "name": "",
+            "value": "const umDia = 60 * 60 * 24 * 1000\r\nconst tresHoras = 60 * 60 * 3 * 1000\r\n\r\nconst data = new Date (0 + umDia + tresHoras)\r\n\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-9",
+            "name": "",
+            "value": "const umDia = 60 * 60 * 24 * 1000\r\nconst tresHoras = 60 * 60 * 3 * 1000\r\n\r\nconst data = new Date (0 - umDia + tresHoras)\r\n\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-10",
+            "name": "",
+            "value": "a função Date sem nenhum argumento passado cria a data atual.\r\n\r\nPodemos passar argumentos da seguinte forma, em ordem:\r\n\r\nnew Date (ano, mês[i], dia, hora, minuto, segundo, milésimos de segundo)",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-11",
+            "name": "",
+            "value": "const data = new Date(2019, 3, 20, 15, 14, 27, 500)\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-12",
+            "name": "",
+            "value": "OBS: se passados mais de 999 milésimos de segundo, o valor corrige à data.\r\n\r\nEssa lógica se aplica também aos segundos (max 59).",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-13",
+            "name": "",
+            "value": "const data = new Date(2019, 3, 20, 15, 14, 27, 1000)\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-14",
+            "name": "",
+            "value": "Do argumento de dia em diante, os argumentos seguintes são opcionais.\r\n\r\nQuando os argumentos são omitidos, eles setam pra '0' os argumentos posteriores.\r\n\r\nQuando o argumento do dia é omitido, ele seta para o primeiro dia do mês.\r\n\r\nSe o mês é omitido, o objeto passa a tomar o primeiro e único argumento como valor em milissegundos.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-15",
+            "name": "",
+            "value": "const data = new Date(2019)\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-16",
+            "name": "",
+            "value": "Também é possível iniciar um objeto Date com \"dataString\", que é um valor do tipo String que representa uma data; a string deverá estar em um formato reconhecido pelo método Date.parse()",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-17",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59')\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-18",
+            "name": "",
+            "value": "Pode-se usar para identificar os segundos um caractere de espaço ou T.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-19",
+            "name": "",
+            "value": "const data = new Date('2019-04-20T20:20:59')\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-20",
+            "name": "",
+            "value": "Podemos também adicionar milissegundos:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-21",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59.100')\r\nreturn data.toString()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-22",
+            "name": "",
+            "value": "Podemos obter informações da data a partir deste objeto.\r\n\r\nPara obter o número do dia:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-23",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59')\r\nreturn 'Dia', data.getDate()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-24",
+            "name": "",
+            "value": "Para obter o mês:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-25",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59')\r\nreturn data.getMonth()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-26",
+            "name": "",
+            "value": "Para obter o ano:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-27",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59')\r\nreturn data.getFullYear()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-28",
+            "name": "",
+            "value": "Para obter a hora:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-29",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59')\r\nreturn data.getHours()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-30",
+            "name": "",
+            "value": "Para obter os minutos:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-31",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59')\r\nreturn data.getMinutes()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-32",
+            "name": "",
+            "value": "Para obter os segundos:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-33",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59')\r\nreturn data.getSeconds()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-34",
+            "name": "",
+            "value": "Para obter os milissegundos:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-35",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59.100')\r\nreturn data.getMilliseconds()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-36",
+            "name": "",
+            "value": "Para obter o número do dia da semana:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-37",
+            "name": "",
+            "value": "const data = new Date('2019-04-20 20:20:59')\r\nreturn data.getDay()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-38",
+            "name": "",
+            "value": "O número do mês começa do zero.\r\n\r\nO dia da semana começa em 0 para domingo e termina em 6 para sábado.\r\n\r\nAlém disso, é possível retornar o número de milésimos de segundo passados desde o Unix Timestamp até o momento:",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-39",
+            "name": "",
+            "value": "return Date.now()",
+            "mode": "javascript",
+            "outputs": []
+        },
+        {
+            "id": "tmp-40",
+            "name": "",
+            "value": "OBS importante: estas funções não retornam zeros à esquerda.",
+            "mode": "md",
+            "outputs": []
+        },
+        {
+            "id": "tmp-41",
+            "name": "",
+            "value": "#### Aula 47 - switch / case\r\n\r\n* Não é obrigatório adicionar o break ao default, porque como já caiu na última opção, não irá percorrer as outras.\r\n\r\n* o switch/case segue executando os casos, até encontrar um **break**.\r\n\r\n#### É possível usar *return* no lugar de *break*!",
+            "mode": "md",
+            "outputs": []
         }
     ]
 }
